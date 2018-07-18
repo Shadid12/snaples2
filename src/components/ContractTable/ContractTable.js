@@ -37,13 +37,14 @@ export default class ContractTable extends Component {
     render() {
         return(
             <div>
+                <h3>Current Events Near You</h3>
                 <Paper >
                     <Table>
                         <TableHead>
                             <TableRow>
                                 <TableCell>Address</TableCell>
                                 <TableCell>Description</TableCell>
-                                <TableCell>Minimum</TableCell>
+                                <TableCell>Minimum Contribution</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
