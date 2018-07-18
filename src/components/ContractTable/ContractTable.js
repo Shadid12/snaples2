@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
 
 import factory from '../../etherium/factory';
 
@@ -45,6 +46,7 @@ export default class ContractTable extends Component {
                                 <TableCell>Address</TableCell>
                                 <TableCell>Description</TableCell>
                                 <TableCell>Minimum Contribution</TableCell>
+                                <TableCell>Actions</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -60,6 +62,20 @@ export default class ContractTable extends Component {
                                             </TableCell>
                                             <TableCell>
                                                 {n.minimum}
+                                            </TableCell>
+                                            <TableCell>
+                                                <Button 
+                                                    variant="contained" 
+                                                    color="primary"
+                                                >
+                                                    Contribute
+                                                </Button>
+                                                <Button 
+                                                    variant="contained" 
+                                                    color="info"
+                                                >
+                                                    More Info
+                                                </Button>
                                             </TableCell>
                                         </TableRow>
                                     )

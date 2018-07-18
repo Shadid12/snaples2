@@ -27,7 +27,7 @@ const RouteButton = withRouter(({ history }) => (
     color="primary"
     onClick={() => { history.push('/new') }}
   >
-    Click Me!
+    New Event
   </Button>
 ))
 
