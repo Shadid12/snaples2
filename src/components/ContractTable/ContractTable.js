@@ -66,13 +66,14 @@ export default class ContractTable extends Component {
                                             <TableCell>
                                                 <Button 
                                                     variant="contained" 
-                                                    color="primary"
+                                                    color="secondary"
+                                                    size='small'
                                                 >
                                                     Contribute
                                                 </Button>
                                                 <Button 
                                                     variant="contained" 
-                                                    color="info"
+                                                    size='small'
                                                 >
                                                     More Info
                                                 </Button>
