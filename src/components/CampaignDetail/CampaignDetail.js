@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import queryString  from 'query-string';
+import queryString  from '../../lib/query-string-master';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -10,6 +10,9 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import factory from '../../etherium/factory';
 import Campaign from '../../etherium/campaign';
 import web3 from '../../etherium/web3';
+
+//css
+import './CampaignDetail.css';
 
 
 export default class CampaignDetail extends Component {
@@ -33,7 +36,7 @@ export default class CampaignDetail extends Component {
         this.setState({ 
             address: parsed.address,
             minimumContribution: summary[0],
-            balance: summary[1],
+            balance: web3.utils.fromWei(summary[1], 'ether'),
             requestsCount: summary[2],
             approversCount: summary[3],
             manager: summary[4],
@@ -81,6 +84,17 @@ export default class CampaignDetail extends Component {
                             </Typography>
                             <div>
                                 Contributers {this.state.approversCount}
+                            </div>
+                            <div>
+                                Balance: { this.state.balance } ETH
+                            </div>
+                            <div>
+                                Spending Requests: { this.state.requestsCount }
+                            </div>
+                            <div className='spending-request'>
+                                <Button variant="contained">
+                                    Create Spend Request
+                                </Button>
                             </div>
                         </CardContent>
                     </Card>
