@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 
 import ContractTable from './components/ContractTable/ContractTable';
 import NewCampaign from './components/NewCampaign/NewCampaign';
+import CampaignDetail from './components/CampaignDetail/CampaignDetail';
 
 // css
 import './App.css';
@@ -15,6 +16,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/new" component={NewCampaign} />
+          <Route exact path="/details" component={CampaignDetail} />
         </div>
       </Router>
     );

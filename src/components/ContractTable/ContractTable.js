@@ -7,15 +7,20 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import { withRouter } from 'react-router-dom';
 
 import factory from '../../etherium/factory';
+import Campaign from '../../etherium/campaign';
+import web3 from '../../etherium/web3';
 
-export default class ContractTable extends Component {
+class ContractTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
             contracts: [],
-            loading: true
+            loading: true,
+            errorMessage: '',
+            selectedContract: ''
         }
         
     }
@@ -33,6 +38,8 @@ export default class ContractTable extends Component {
 
         this.setState({ contracts: campaigns });
     }
+
+    
 
 
     render() {
@@ -64,18 +71,14 @@ export default class ContractTable extends Component {
                                                 {n.minimum}
                                             </TableCell>
                                             <TableCell>
-                                                <Button 
+                                                <Button
                                                     variant="contained" 
-                                                    color="secondary"
-                                                    size='small'
-                                                >
-                                                    Contribute
-                                                </Button>
-                                                <Button 
-                                                    variant="contained" 
-                                                    size='small'
-                                                >
-                                                    More Info
+                                                    color="primary"
+                                                    onClick={() => { 
+                                                        this.props.history.push(`/details?${n.contractAddress}`) 
+                                                    }}
+                                                    >
+                                                    Show Details
                                                 </Button>
                                             </TableCell>
                                         </TableRow>
@@ -89,3 +92,5 @@ export default class ContractTable extends Component {
         )
     }
 }
+
+export default withRouter(ContractTable);
