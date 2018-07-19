@@ -75,7 +75,7 @@ class ContractTable extends Component {
                                                     variant="contained" 
                                                     color="primary"
                                                     onClick={() => { 
-                                                        this.props.history.push(`/details?${n.contractAddress}`) 
+                                                        this.props.history.push(`/details?address=${n.contractAddress}`) 
                                                     }}
                                                     >
                                                     Show Details
