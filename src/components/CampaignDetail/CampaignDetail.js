@@ -101,6 +101,15 @@ export default class CampaignDetail extends Component {
                                     Create Spend Request
                                 </Button>
                             </div>
+                            <div className='spending-request'>
+                                <Button variant="contained"
+                                    onClick={
+                                        () => this.props.history.push(`/spending-requests?address=${this.state.address}`)
+                                    }
+                                >
+                                    Show All Requestss
+                                </Button>
+                            </div>
                         </CardContent>
                     </Card>
                     <div className='txt-field'>

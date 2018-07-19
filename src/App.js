@@ -6,6 +6,7 @@ import ContractTable from './components/ContractTable/ContractTable';
 import NewCampaign from './components/NewCampaign/NewCampaign';
 import CampaignDetail from './components/CampaignDetail/CampaignDetail';
 import SpendingNew from './components/SpendingNew/SpendingNew';
+import SpendingRequests from './components/SpendingRequests/SpendingRequests';
 
 // css
 import './App.css';
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path="/new" component={NewCampaign} />
           <Route exact path="/details" component={CampaignDetail} />
           <Route exact path="/spending-new" component={SpendingNew} />
+          <Route exact path="/spending-requests" component={SpendingRequests} />
         </div>
       </Router>
     );
