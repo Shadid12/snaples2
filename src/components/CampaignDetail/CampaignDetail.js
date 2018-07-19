@@ -6,6 +6,7 @@ import queryString  from '../../lib/query-string-master';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { withRouter } from 'react-router-dom';
 
 import factory from '../../etherium/factory';
 import Campaign from '../../etherium/campaign';
@@ -92,7 +93,11 @@ export default class CampaignDetail extends Component {
                                 Spending Requests: { this.state.requestsCount }
                             </div>
                             <div className='spending-request'>
-                                <Button variant="contained">
+                                <Button variant="contained"
+                                    onClick={
+                                        () => this.props.history.push(`/spending-new?address=${this.state.address}`)
+                                    }
+                                >
                                     Create Spend Request
                                 </Button>
                             </div>
