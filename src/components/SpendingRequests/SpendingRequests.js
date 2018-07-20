@@ -149,6 +149,7 @@ export default class SpendingRequests extends Component {
                         </TableBody>
                     </Table>
                 </Paper>
+                
 
                 <div className='txt-field'>
                         <TextField

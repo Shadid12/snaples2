@@ -7,6 +7,7 @@ import NewCampaign from './components/NewCampaign/NewCampaign';
 import CampaignDetail from './components/CampaignDetail/CampaignDetail';
 import SpendingNew from './components/SpendingNew/SpendingNew';
 import SpendingRequests from './components/SpendingRequests/SpendingRequests';
+import LandingPage from './components/LandingPage/LandingPage';
 
 // css
 import './App.css';
@@ -21,6 +22,7 @@ class App extends Component {
           <Route exact path="/details" component={CampaignDetail} />
           <Route exact path="/spending-new" component={SpendingNew} />
           <Route exact path="/spending-requests" component={SpendingRequests} />
+          <Route exact path='/landing' component={LandingPage} />
         </div>
       </Router>
     );
