@@ -17,12 +17,12 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/new" component={NewCampaign} />
           <Route exact path="/details" component={CampaignDetail} />
           <Route exact path="/spending-new" component={SpendingNew} />
           <Route exact path="/spending-requests" component={SpendingRequests} />
-          <Route exact path='/landing' component={LandingPage} />
+          <Route exact path='/' component={LandingPage} />
         </div>
       </Router>
     );
